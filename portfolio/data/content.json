@@ -1,0 +1,78 @@
+{
+  "profile": {
+    "name": "Your Name",
+    "role": "Software Engineer",
+    "location": "City, Country",
+    "summary": "I build reliable, accessible, and user-focused products. I enjoy working across the stack, mentoring teams, and shipping delightful features.",
+    "avatarUrl": "https://picsum.photos/seed/profile/480/480",
+    "socials": [
+      { "name": "GitHub", "url": "https://github.com/yourname" },
+      { "name": "LinkedIn", "url": "https://www.linkedin.com/in/yourname" },
+      { "name": "X", "url": "https://x.com/yourname" }
+    ],
+    "topTechnologies": ["TypeScript", "React", "Node.js", "Next.js", "PostgreSQL", "AWS"]
+  },
+  "experience": [
+    {
+      "company": "Acme Corp",
+      "role": "Senior Software Engineer",
+      "period": "2022 — Present",
+      "location": "Remote",
+      "achievements": [
+        "Led migration to a modern React/TypeScript stack; improved performance by 35%.",
+        "Built CI pipeline reducing deployment time from 20 minutes to 5 minutes.",
+        "Mentored 5 engineers and established code quality guidelines."
+      ],
+      "technologies": ["TypeScript", "React", "Node.js", "GraphQL", "AWS"]
+    },
+    {
+      "company": "Globex",
+      "role": "Software Engineer",
+      "period": "2019 — 2022",
+      "location": "On-site",
+      "achievements": [
+        "Delivered a multi-tenant platform serving 100k+ monthly users.",
+        "Designed database schemas and improved query performance by 50%."
+      ],
+      "technologies": ["JavaScript", "Express", "PostgreSQL", "Redis"]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Project One",
+      "description": "A web app that helps users track and visualize habits with beautiful charts.",
+      "technologies": ["React", "D3.js", "Firebase"],
+      "link": "https://example.com",
+      "source": "https://github.com/yourname/project-one",
+      "image": "https://picsum.photos/seed/project1/600/400"
+    },
+    {
+      "name": "Project Two",
+      "description": "CLI tool that automates project scaffolding and best practices.",
+      "technologies": ["Node.js", "TypeScript"],
+      "link": "https://example.com",
+      "source": "https://github.com/yourname/project-two",
+      "image": "https://picsum.photos/seed/project2/600/400"
+    },
+    {
+      "name": "Project Three",
+      "description": "Mobile app for personal finance tracking and budgeting.",
+      "technologies": ["React Native"],
+      "link": "https://example.com",
+      "source": "https://github.com/yourname/project-three",
+      "image": "https://picsum.photos/seed/project3/600/400"
+    }
+  ],
+  "education": [
+    {
+      "institution": "State University",
+      "degree": "B.S. in Computer Science",
+      "period": "2015 — 2019",
+      "details": "Graduated with honors. Coursework in algorithms, databases, distributed systems."
+    }
+  ],
+  "contact": {
+    "email": "you@example.com",
+    "formEndpoint": ""
+  }
+}
