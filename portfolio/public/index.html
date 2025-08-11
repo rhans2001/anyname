@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Professional Portfolio</title>
+  <meta name="description" content="Professional portfolio showcasing experience, projects, education, and contact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">Your Name</div>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact" class="btn btn-primary">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="container">
+        <h1>Hi, I'm <span class="accent">Your Name</span></h1>
+        <p class="subtitle">A short, compelling tagline about what you do and what you love to build.</p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn">Get In Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About</h2>
+        <p>
+          Write a concise description about yourself: your background, passions, and the kinds of problems you enjoy solving. Mention technologies, industries, or roles where you bring the most value.
+        </p>
+      </div>
+    </section>
+
+    <section id="experience" class="section alt">
+      <div class="container">
+        <h2>Experience</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-meta">Company • Role • Dates</div>
+            <div class="timeline-content">
+              <h3>Role Title</h3>
+              <p>Brief bullet points of your impact and responsibilities. Focus on outcomes and metrics where possible.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-meta">Company • Role • Dates</div>
+            <div class="timeline-content">
+              <h3>Role Title</h3>
+              <p>Another brief summary of achievements, technologies used, and business outcomes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Project Name</h3>
+            <p>A brief description of the project, problem solved, and your role. Technologies: X, Y, Z.</p>
+            <div class="card-actions">
+              <a href="#" target="_blank" rel="noopener" class="btn btn-sm">Live</a>
+              <a href="#" target="_blank" rel="noopener" class="btn btn-sm">Repo</a>
+            </div>
+          </article>
+          <article class="card">
+            <h3>Project Name</h3>
+            <p>Succinctly describe what you built and the value it provides. Mention any notable results.</p>
+            <div class="card-actions">
+              <a href="#" target="_blank" rel="noopener" class="btn btn-sm">Live</a>
+              <a href="#" target="_blank" rel="noopener" class="btn btn-sm">Repo</a>
+            </div>
+          </article>
+          <article class="card">
+            <h3>Project Name</h3>
+            <p>One more project tile to round things out. Keep it concise and engaging.</p>
+            <div class="card-actions">
+              <a href="#" target="_blank" rel="noopener" class="btn btn-sm">Live</a>
+              <a href="#" target="_blank" rel="noopener" class="btn btn-sm">Repo</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section alt">
+      <div class="container">
+        <h2>Education</h2>
+        <ul class="edu-list">
+          <li>
+            <div class="edu-degree">Degree, Institution</div>
+            <div class="edu-meta">Years • Major/Focus</div>
+          </li>
+          <li>
+            <div class="edu-degree">Certification, Provider</div>
+            <div class="edu-meta">Year • Credential ID</div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>Have a question or want to work together? Send a message:</p>
+        <form id="contact-form" class="contact-form" novalidate>
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required maxlength="100" />
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required maxlength="200" />
+          </div>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required maxlength="2000"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send</button>
+          <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Your Name. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/script.js" defer></script>
+</body>
+</html>
