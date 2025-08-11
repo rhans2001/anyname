@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio | Your Name</title>
+    <meta name="description" content="Professional portfolio of Your Name: experience, projects, education, and contact." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --bg: #0b0d12;
+        --panel: #11141a;
+        --text: #e5e7eb;
+        --muted: #9ca3af;
+        --brand: #7c3aed;
+        --brand-2: #06b6d4;
+        --border: #1f2430;
+      }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; padding: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; background: var(--bg); color: var(--text); }
+      a { color: inherit; text-decoration: none; }
+      .container { max-width: 1000px; margin: 0 auto; padding: 24px; }
+      header { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(8px); background: rgba(11,13,18,0.7); border-bottom: 1px solid var(--border); }
+      nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+      .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: 0.2px; }
+      .logo { width: 28px; height: 28px; background: linear-gradient(135deg, var(--brand), var(--brand-2)); border-radius: 8px; box-shadow: 0 8px 30px rgba(124,58,237,0.35); }
+      .nav-links { display: flex; gap: 14px; font-size: 14px; color: var(--muted); }
+      .nav-links a { padding: 8px 10px; border-radius: 8px; }
+      .nav-links a:hover { background: var(--panel); color: var(--text); }
+
+      .hero { padding: 56px 0 28px; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 20px; align-items: center; }
+      .hero .title { font-size: 40px; line-height: 1.1; margin: 0 0 12px; font-weight: 700; }
+      .hero .subtitle { color: var(--muted); margin: 0 0 18px; }
+      .hero .cta { display: flex; gap: 10px; }
+      .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border-radius: 10px; border: 1px solid var(--border); background: var(--panel); color: var(--text); font-weight: 600; }
+      .btn.primary { background: linear-gradient(135deg, var(--brand), var(--brand-2)); border: 0; }
+
+      .card { background: var(--panel); border: 1px solid var(--border); border-radius: 14px; padding: 18px; }
+      section { margin: 28px 0; }
+      h2 { font-size: 22px; margin: 0 0 14px; }
+      .grid { display: grid; gap: 14px; }
+
+      .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+      .item-title { font-weight: 600; margin: 0 0 8px; }
+      .item-sub { color: var(--muted); font-size: 14px; margin: 0 0 8px; }
+      .tag { display: inline-flex; align-items: center; padding: 4px 8px; background: #0f1320; border: 1px solid var(--border); color: var(--muted); border-radius: 999px; font-size: 12px; margin-right: 6px; margin-bottom: 6px; }
+
+      form { display: grid; gap: 10px; }
+      label { font-weight: 600; font-size: 14px; color: var(--muted); }
+      input, textarea { width: 100%; padding: 10px 12px; background: #0a0d14; color: var(--text); border: 1px solid var(--border); border-radius: 10px; }
+      textarea { min-height: 120px; resize: vertical; }
+      .footer { padding: 24px 0 48px; color: var(--muted); font-size: 14px; }
+
+      @media (max-width: 860px) {
+        .hero { grid-template-columns: 1fr; }
+        .grid-2 { grid-template-columns: 1fr; }
+        .grid-3 { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="brand">
+            <div class="logo"></div>
+            <span>Your Name</span>
+          </div>
+          <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <div>
+          <h1 class="title">Building performant, delightful web experiences.</h1>
+          <p class="subtitle">Full‑stack engineer specializing in TypeScript, React, and cloud‑native systems. I design, build, and ship user‑centric products end‑to‑end.</p>
+          <div class="cta">
+            <a class="btn primary" href="#contact">Contact me</a>
+            <a class="btn" href="#projects">View projects</a>
+          </div>
+        </div>
+        <div class="card">
+          <h2>At a glance</h2>
+          <div>
+            <span class="tag">TypeScript</span>
+            <span class="tag">React / Next.js</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">GraphQL</span>
+            <span class="tag">AWS</span>
+            <span class="tag">PostgreSQL</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="card">
+          <h2>About</h2>
+          <p>I'm a software engineer with a focus on product quality, developer experience, and performance. I enjoy working across the stack—from crafting accessible, responsive UIs to designing reliable backend services.</p>
+        </div>
+      </section>
+
+      <section id="experience">
+        <h2>Experience</h2>
+        <div class="grid grid-2">
+          <div class="card">
+            <div class="item-title">Senior Software Engineer · Company A</div>
+            <div class="item-sub">2022 — Present · Remote</div>
+            <p>Led development of a Next.js platform serving 2M+ monthly users, improving Core Web Vitals and developer velocity.</p>
+            <div>
+              <span class="tag">Next.js</span>
+              <span class="tag">React</span>
+              <span class="tag">Edge</span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="item-title">Software Engineer · Company B</div>
+            <div class="item-sub">2019 — 2022 · City</div>
+            <p>Built internal tools and microservices, reducing operational toil and enabling faster product iteration.</p>
+            <div>
+              <span class="tag">Node.js</span>
+              <span class="tag">GraphQL</span>
+              <span class="tag">PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="grid grid-3">
+          <div class="card">
+            <div class="item-title">Project One</div>
+            <div class="item-sub">Open‑source library that simplifies X</div>
+            <p><a href="#">GitHub</a> · <a href="#">Live</a></p>
+          </div>
+          <div class="card">
+            <div class="item-title">Project Two</div>
+            <div class="item-sub">Full‑stack demo showcasing Y</div>
+            <p><a href="#">GitHub</a> · <a href="#">Live</a></p>
+          </div>
+          <div class="card">
+            <div class="item-title">Project Three</div>
+            <div class="item-sub">Performance optimizations and A/B tests</div>
+            <p><a href="#">Case study</a></p>
+          </div>
+        </div>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <div class="grid grid-2">
+          <div class="card">
+            <div class="item-title">B.S. in Computer Science</div>
+            <div class="item-sub">University Name · 2015 — 2019</div>
+            <p>Focus: distributed systems, HCI, and databases.</p>
+          </div>
+          <div class="card">
+            <div class="item-title">Certifications</div>
+            <div class="item-sub">AWS, GCP, etc.</div>
+            <p>Relevant certifications and continuing education.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <div class="card">
+          <form id="contact-form">
+            <div>
+              <label for="name">Name</label>
+              <input id="name" name="name" placeholder="Your name" required />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" type="email" name="email" placeholder="you@example.com" required />
+            </div>
+            <div>
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="How can I help?" required></textarea>
+            </div>
+            <button class="btn primary" type="submit">Send message</button>
+            <p id="status" class="item-sub" style="margin:8px 0 0"></p>
+          </form>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div>© <span id="year"></span> Your Name · Built with care</div>
+      </footer>
+    </main>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear().toString();
+      const form = document.getElementById('contact-form');
+      const statusEl = document.getElementById('status');
+      form?.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        statusEl.textContent = 'Sending…';
+        const formData = new FormData(form);
+        const payload = Object.fromEntries(formData.entries());
+        try {
+          const res = await fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+          if (!res.ok) throw new Error('Request failed');
+          statusEl.textContent = 'Thanks! I will get back to you shortly.';
+          form.reset();
+        } catch (err) {
+          statusEl.textContent = 'Sorry, something went wrong. Please try again later.';
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "portfolio-static",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "NODE_ENV=production node server.mjs",
+    "dev": "NODE_ENV=development node server.mjs"
+  },
+  "dependencies": {
+    "@polka/send": "^1.0.0-next.25",
+    "polka": "^1.0.0-next.25",
+    "sirv": "^2.0.4"
+  }
+}
