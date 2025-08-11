@@ -164,7 +164,7 @@
       const card = createEl('article');
       card.className = 'card project';
       const thumb = createEl('div'); thumb.className = 'thumb';
-      const img = createEl('img'); img.src = p.image; img.alt = `${p.name} screenshot`;
+      const img = createEl('img'); img.src = p.image; img.alt = `${p.name} screenshot`; img.loading = 'lazy'; img.decoding = 'async'; img.width = 600; img.height = 400;
       thumb.appendChild(img);
       const h3 = createEl('h3'); h3.textContent = p.name;
       const desc = createEl('p'); desc.className = 'muted'; desc.textContent = p.description;
@@ -256,16 +256,93 @@
     });
   }
 
+  function setupScrollReveal() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+    const markForReveal = (elements) => {
+      elements.forEach((el) => {
+        if (!el.classList.contains('reveal')) el.classList.add('reveal');
+        observer.observe(el);
+      });
+    };
+
+    const immediate = [
+      ...document.querySelectorAll('.section h2'),
+      ...document.querySelectorAll('.hero .hero-content > *')
+    ];
+    markForReveal(immediate);
+
+    return { markForReveal };
+  }
+
+  function setupActiveNav() {
+    const links = Array.from(document.querySelectorAll('.nav-menu a[href^="#"]'));
+    const byId = Object.fromEntries(links.map((a) => [a.getAttribute('href').slice(1), a]));
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const id = entry.target.id;
+        const link = byId[id];
+        if (!link) return;
+        if (entry.isIntersecting) {
+          links.forEach((l) => { l.classList.remove('active'); l.removeAttribute('aria-current'); });
+          link.classList.add('active');
+          link.setAttribute('aria-current', 'page');
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+
+    document.querySelectorAll('main .section').forEach((section) => observer.observe(section));
+  }
+
+  function setupCopyEmail() {
+    const btn = document.getElementById('copy-email');
+    const link = document.getElementById('contact-email');
+    const status = document.getElementById('copy-email-status');
+    if (!btn || !link) return;
+    btn.addEventListener('click', async () => {
+      const email = (content.contact && content.contact.email) || (link.textContent || '').trim();
+      try {
+        await navigator.clipboard.writeText(email);
+        if (status) {
+          status.textContent = 'Copied!';
+          setTimeout(() => { status.textContent = ''; }, 1800);
+        }
+      } catch (e) {
+        if (status) status.textContent = 'Press Ctrl+C to copy';
+      }
+    });
+  }
+
+  function makeImageLazy(img) {
+    if (!img) return;
+    img.loading = 'lazy';
+    img.decoding = 'async';
+  }
+
   let content = defaultContent;
   document.addEventListener('DOMContentLoaded', async () => {
     setupNav();
     setupThemeToggle();
+    setupActiveNav();
+    setupCopyEmail();
+
     content = await loadContent();
 
     renderProfile(content.profile || {});
     renderExperience(content.experience || []);
     renderProjects(content.projects || []);
     renderEducation(content.education || []);
+
+    // Lazy-load hero image
+    makeImageLazy(document.getElementById('profile-avatar'));
 
     const aboutText = document.getElementById('about-text');
     if (aboutText && content.profile && content.profile.summary) aboutText.textContent = content.profile.summary;
@@ -280,5 +357,9 @@
         await submitForm(form, content.contact && content.contact.formEndpoint, content.contact && content.contact.email);
       });
     }
+
+    // Scroll reveal newly rendered items
+    const { markForReveal } = setupScrollReveal();
+    markForReveal(Array.from(document.querySelectorAll('#projects-grid .card, #experience-list li, #education-list li')));
   });
 })();
