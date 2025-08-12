@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Your Name — Portfolio</title>
+    <meta name="description" content="Portfolio of Your Name: software engineer showcasing projects, experience, and education." />
+    <meta property="og:title" content="Your Name — Portfolio" />
+    <meta property="og:description" content="Software engineer showcasing projects, experience, and education." />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#0ea5e9" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" href="./assets/favicon.ico" />
+    <link rel="apple-touch-icon" href="./assets/icon-192.png" />
+    <link rel="manifest" href="./site.webmanifest" />
+  </head>
+  <body>
+    <a href="#home" class="skip-link">Skip to content</a>
+    <header class="site-header" role="banner">
+      <div class="container header-inner">
+        <a href="#home" class="brand">Your Name</a>
+        <nav class="nav" id="nav" role="navigation" aria-label="Primary">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#education">Education</a>
+          <a href="#contact">Contact</a>
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+        </nav>
+        <button class="nav-toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+      </div>
+    </header>
+
+    <main id="home" role="main">
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-text">
+            <h1>Hello, I’m <span class="accent">Your Name</span></h1>
+            <p class="subtitle">Software Engineer • Full‑Stack • Problem Solver</p>
+            <p class="lede">I craft reliable web experiences and scalable systems. I enjoy turning complex challenges into elegant, human‑centered solutions.</p>
+            <div class="cta">
+              <a class="btn btn-primary" href="#projects">View Projects</a>
+              <a class="btn btn-ghost" href="#contact">Get in touch</a>
+            </div>
+            <div class="meta">
+              <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+              <span>•</span>
+              <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+              <span>•</span>
+              <a href="./assets/Your_Name_Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+            </div>
+          </div>
+          <div class="hero-media">
+            <img src="./assets/profile.jpg" alt="Portrait of Your Name" />
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container">
+          <h2>About</h2>
+          <p>
+            I’m a software engineer with a passion for building high‑quality products. I focus on user impact, performance, and maintainability.
+            My toolkit includes TypeScript, React, Node.js, and cloud‑native services.
+          </p>
+          <div class="about-highlights">
+            <div class="card">
+              <h3>What I do</h3>
+              <ul>
+                <li>Design and develop web apps end‑to‑end</li>
+                <li>Architect APIs and data models</li>
+                <li>Automate CI/CD and testing</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>Strengths</h3>
+              <ul>
+                <li>System design and documentation</li>
+                <li>Developer experience and tooling</li>
+                <li>Mentorship and collaboration</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>Interests</h3>
+              <ul>
+                <li>Edge computing and AI tooling</li>
+                <li>Data visualization</li>
+                <li>Open source</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="section">
+        <div class="container">
+          <h2>Experience</h2>
+          <ol class="timeline">
+            <li class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <div class="row">
+                  <div class="col">
+                    <h3>Senior Software Engineer · Company A</h3>
+                    <p class="muted">Jan 2022 — Present · Remote</p>
+                  </div>
+                  <div class="col right">
+                    <span class="badge">TypeScript</span>
+                    <span class="badge">Next.js</span>
+                    <span class="badge">AWS</span>
+                  </div>
+                </div>
+                <ul>
+                  <li>Led rebuild of the core platform, improving performance by 35%.</li>
+                  <li>Designed event‑driven architecture enabling real‑time analytics.</li>
+                  <li>Mentored 4 engineers and introduced testing best practices.</li>
+                </ul>
+              </div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <div class="row">
+                  <div class="col">
+                    <h3>Software Engineer · Company B</h3>
+                    <p class="muted">Aug 2019 — Dec 2021 · City, Country</p>
+                  </div>
+                  <div class="col right">
+                    <span class="badge">React</span>
+                    <span class="badge">Node.js</span>
+                    <span class="badge">PostgreSQL</span>
+                  </div>
+                </div>
+                <ul>
+                  <li>Shipped features used by 1M+ users with 99.95% uptime.</li>
+                  <li>Implemented role‑based access control and audit logging.</li>
+                  <li>Collaborated with designers to improve UX and accessibility.</li>
+                </ul>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="container">
+          <h2>Projects</h2>
+          <div class="projects-grid">
+            <article class="project-card">
+              <div class="project-header">
+                <h3>Project One</h3>
+                <div class="tags">
+                  <span class="badge">Next.js</span>
+                  <span class="badge">GraphQL</span>
+                </div>
+              </div>
+              <p>A performant web app for visualizing time‑series data with real‑time updates.</p>
+              <div class="project-links">
+                <a class="btn btn-ghost" href="#" target="_blank" rel="noreferrer">Live Demo</a>
+                <a class="btn btn-ghost" href="#" target="_blank" rel="noreferrer">Source</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-header">
+                <h3>Project Two</h3>
+                <div class="tags">
+                  <span class="badge">React</span>
+                  <span class="badge">D3</span>
+                </div>
+              </div>
+              <p>Interactive dashboards that turn complex datasets into actionable insights.</p>
+              <div class="project-links">
+                <a class="btn btn-ghost" href="#" target="_blank" rel="noreferrer">Live Demo</a>
+                <a class="btn btn-ghost" href="#" target="_blank" rel="noreferrer">Source</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-header">
+                <h3>Project Three</h3>
+                <div class="tags">
+                  <span class="badge">Node.js</span>
+                  <span class="badge">PostgreSQL</span>
+                </div>
+              </div>
+              <p>API platform with robust authentication, rate limiting, and observability.</p>
+              <div class="project-links">
+                <a class="btn btn-ghost" href="#" target="_blank" rel="noreferrer">Live Demo</a>
+                <a class="btn btn-ghost" href="#" target="_blank" rel="noreferrer">Source</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="section">
+        <div class="container">
+          <h2>Education</h2>
+          <ul class="edu-list">
+            <li>
+              <h3>B.Sc. in Computer Science · University X</h3>
+              <p class="muted">2015 — 2019</p>
+            </li>
+            <li>
+              <h3>Coursework & Certifications</h3>
+              <ul class="arrow-list">
+                <li>Systems Design</li>
+                <li>Cloud Architecture</li>
+                <li>Accessibility (WCAG)</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container">
+          <h2>Contact</h2>
+          <p>Have a question or want to work together? Send a message.</p>
+          <form id="contactForm" class="contact-form" novalidate>
+            <div class="grid">
+              <label>
+                <span>Name</span>
+                <input type="text" name="name" placeholder="Jane Doe" required />
+              </label>
+              <label>
+                <span>Email</span>
+                <input type="email" name="email" placeholder="jane@example.com" required />
+              </label>
+            </div>
+            <label>
+              <span>Subject</span>
+              <input type="text" name="subject" placeholder="Let's build something" />
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="6" placeholder="Your message..." required></textarea>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" name="consent" required />
+              <span>I consent to having this website store my submitted information so you can respond.</span>
+            </label>
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit">Send Message</button>
+              <span class="form-status" id="formStatus" role="status" aria-live="polite"></span>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <p>© <span id="year"></span> Your Name. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>
